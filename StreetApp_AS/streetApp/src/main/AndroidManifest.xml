@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yl.ming.efengshe"
+    android:versionCode="31"
+    android:versionName="3.0">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取用户设备的IMEI，通过IMEI和mac来唯一的标识用户。 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 检测联网方式，区分用户设备使用的是2G、3G或是WiFi -->
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.permission.RECV_XXX" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission android:name="com.android.SEND_XXX" />
+    <permission android:name="com.android.permission.RECV_XXX" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取用户设备的mac地址，在平板设备上，无法通过imei标示设备                     ，我们会将mac地址作为用户的唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- ShareSDK -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+    <!-- 屏蔽HOME键需要的权限 -->
+    <application
+        android:name="com.juxun.business.street.UILApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/UpdateTheme"
+        tools:replace="android:name,android:theme,android:icon,android:label">
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="HroSvzsg9Hbj1nvEi2pE6TQM7NmSoSP6" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="23388057" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.056" />
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="a17dab8f918c7b28c90a5cb474d8e4a9" />
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="59354484" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="595c95c2c895763eb5000517" /> <!-- 友盟数据统计 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="YinYongBao" /> <!-- 友盟数据统计 -->
+
+        <activity
+            android:name="com.juxun.business.street.activity.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.GuideActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.MainActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.HotLineDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.ApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.StreetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.AddStoreActivity"
+            android:screenOrientation="portrait" /> <!-- 新增储值活动 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AddCardActivity"
+            android:screenOrientation="portrait" /> <!-- 编辑储值卡 -->
+        <activity
+            android:name="com.example.imagedemo.ImagePagerActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.juxun.business.street.activity.MoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.FinancialInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" /> <!-- 财务首页 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PaidActivity"
+            android:screenOrientation="portrait" /> <!-- 实收总金额首页 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PaidOrderDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 实收总金额首页详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PaidDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 实收总金额首页详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ExtractableDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 已提取金额详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ExtractableActivity"
+            android:screenOrientation="portrait" /> <!-- 已提取金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.BeenExtractableActivity"
+            android:screenOrientation="portrait" /> <!-- 可提取金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.FreezeActivity"
+            android:screenOrientation="portrait" /> <!-- 冻结金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.BusinessAnalysisAcitivity"
+            android:screenOrientation="portrait" /> <!-- 营业分析 -->
+        <activity
+            android:name="com.juxun.business.street.activity.BusinessToDayAcitivity"
+            android:screenOrientation="portrait" /> <!-- 当日营业分析 -->
+        <activity
+            android:name="com.juxun.business.street.activity.BusinessOrderAcitivity"
+            android:screenOrientation="portrait" /> <!-- 订单盈利详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ApplyWithdrawActivity"
+            android:screenOrientation="portrait" /> <!-- 我要提现 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SucceedWithdrawAccessActivity"
+            android:screenOrientation="portrait" /> <!-- 提现成功界面 -->
+        <activity
+            android:name="com.juxun.business.street.activity.WithdrawAccessActivity"
+            android:screenOrientation="portrait" /> <!-- 账户列表 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CommissionAnalysisAcitivity"
+            android:screenOrientation="portrait" /> <!-- 分佣分析 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CommissionToDayAcitivity"
+            android:screenOrientation="portrait" /> <!-- 当日分佣分析 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CommissionOrderDetailAcitivity"
+            android:screenOrientation="portrait" /> <!-- 订单分佣详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.StoreSetActivity"
+            android:screenOrientation="portrait" /> <!-- 店铺设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ShopStatisticsActivity"
+            android:screenOrientation="portrait" /> <!-- 营业分析 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CanCashActivity"
+            android:screenOrientation="portrait" /> <!-- 可提现金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CashRecordActivity"
+            android:screenOrientation="portrait" /> <!-- 可提现金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CashFreezeActivity"
+            android:screenOrientation="portrait" /> <!-- 可提现金额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ShopWalletActivity"
+            android:screenOrientation="portrait" /> <!-- 店铺钱包 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AnnouncementActivity"
+            android:screenOrientation="portrait" /> <!-- 店铺公告设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.MessageListActivity"
+            android:screenOrientation="portrait" /> <!-- 消息中心列表 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AboutusActivity"
+            android:screenOrientation="portrait" /> <!-- 关于我们 -->
+        <activity
+            android:name="com.juxun.business.street.activity.FeedBackActivity"
+            android:screenOrientation="portrait" /> <!-- 意见反馈 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PurchasingBalanceActivity"
+            android:screenOrientation="portrait" /> <!-- 采购余额 -->
+        <activity
+            android:name="com.juxun.business.street.activity.DeccaDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 台卡申请 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AddAccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 添加账户 -->
+        <activity
+            android:name="com.juxun.business.street.activity.DeccaSetActivity"
+            android:screenOrientation="portrait" /> <!-- 台卡设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CashAccountListActivity"
+            android:screenOrientation="portrait" /> <!-- 提现账户设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 台卡城市选择 -->
+        <activity
+            android:name="com.juxun.business.street.activity.BankListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 获取支行列表 -->
+        <activity
+            android:name="com.juxun.business.street.activity.TopUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /> <!-- 充值 -->
+        <activity
+            android:name="com.juxun.business.street.activity.TopUpPayDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" /> <!-- 充值支付 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetPaymentSecurityActivity"
+            android:screenOrientation="portrait" /> <!-- 支付安全设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SearchWebviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <!-- 搜索webview -->
+        <activity
+            android:name="com.juxun.business.street.activity.WhiteWebviewActivity"
+            android:screenOrientation="portrait" /> <!-- 白条的网页 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetCodeActivity"
+            android:screenOrientation="portrait" /> <!-- 店铺二维码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetGesturesPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 设置手势密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ToPromoteActivity"
+            android:screenOrientation="portrait" /> <!-- 推广店铺 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SmallCodeActivity"
+            android:screenOrientation="portrait" /> <!-- 小程序二维码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.TheInvitationActivity"
+            android:screenOrientation="portrait" /> <!-- 邀请人数 -->
+        <activity
+            android:name="com.juxun.business.street.activity.GesturesLoginActivity"
+            android:screenOrientation="portrait" /> <!-- 身份验证 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 忘记密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ForgotPassword2Activity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" /> <!-- 忘记密码 2 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetBussinessTimeActivity"
+            android:screenOrientation="portrait" /> <!-- 店铺营业时间设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.MobilePhoneActivity"
+            android:screenOrientation="portrait" /> <!-- 设置密保手机 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ReplaceEncryptedPhonesActivity"
+            android:screenOrientation="portrait" /> <!-- 更换密保手机 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetFreighteActivity"
+            android:screenOrientation="portrait" /> <!-- 运费设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetScopeActivity"
+            android:screenOrientation="portrait" /> <!-- 营业范围设置 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetDeliveryPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /> <!-- 设置配送电话 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 修改登录密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PromptActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" /> <!-- 推送弹框修改密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ModifyPasswordActivity2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 修改登录密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AddAccount2Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 添加账户 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetPayPasswordOneActivity"
+            android:screenOrientation="portrait" /> <!-- 设置支付密码一 -->
+        <activity
+            android:name="com.juxun.business.street.activity.SetPayPasswordTwoActivity"
+            android:screenOrientation="portrait" /> <!-- 设置支付密码二 -->
+        <activity
+            android:name="com.juxun.business.street.activity.VerifyPaymentPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 验证支付密码 -->
+        <activity
+            android:name="com.juxun.business.street.activity.PurchasingDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- 充值记录详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.InputNumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.PayDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.DownlineTipsDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.PayActivity"
+            android:screenOrientation="portrait" /> <!-- 二维码支付页面 -->
+        <activity
+            android:name="com.juxun.business.street.activity.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.LoginOutDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.ShareChooseDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.juxun.business.street.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <!-- 团购订单 -->
+        <activity
+            android:name="com.juxun.business.street.activity.ElectricitySupplierOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 电商订单详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.EleOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.GoodsMianAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1"> <!-- 商品管理首页 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.InthesaleAcitivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1"> <!-- 出售中的商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.ModifyGoodsAcitivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1"> <!-- 修改商品信息 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.OtherSearchAcitivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"> <!-- 其它商品搜索 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.NoGoodsShelvesAcitivity"
+            android:screenOrientation="portrait"> <!-- 未上架的商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.OtherStateAcitivity"
+            android:screenOrientation="portrait"> <!-- 其它状态的商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.UnderstockAcitivity"
+            android:screenOrientation="portrait"> <!-- 库存不足的商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.OverdueAcitivity"
+            android:screenOrientation="portrait"> <!-- 即将过期的商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.GoodsSearchAcitivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"> <!-- 搜索首页 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.TemplateListAcitivity"
+            android:screenOrientation="portrait"> <!-- 模板列表 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.TemplatedetailsAcitivity"
+            android:screenOrientation="portrait"> <!-- 模板详情 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.ModifyTemplateAcitivity"
+            android:screenOrientation="portrait"> <!-- 选用模板 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AddGoodsAcitivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"> <!-- 添加商品 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.CheckdetailsAcitivity"
+            android:screenOrientation="portrait"> <!-- 商品详情 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AmendShekflifeAcitivity"
+            android:screenOrientation="portrait"> <!-- 修改库存及保质期 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.ConfirmTheOrderActivity"
+            android:screenOrientation="portrait"> <!-- 供应商商品 确认下单 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.TopayforActivity"
+            android:screenOrientation="portrait"> <!-- 重新支付 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RedPacketActivity"
+            android:screenOrientation="portrait"> <!-- 可用红包列表 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RedExchangeActivity"
+            android:screenOrientation="portrait"> <!-- 红包兑换 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AredenvelopeDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1"> <!-- 红包弹框 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RedHistoryActivity"
+            android:screenOrientation="portrait"> <!-- 历史红包列表 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.ShoppingCartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan"> <!-- 供应商购物车 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.OrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"> <!-- 供应商订单列表 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.PurchaseOrderDetailsActivity"
+            android:screenOrientation="portrait"> <!-- 供应商订单详情 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AddressListActivity"
+            android:screenOrientation="portrait"> <!-- 收货地址 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AddAddressActivity"
+            android:screenOrientation="portrait"> <!-- 新增供应商地址 -->
+        </activity>
+
+        <activity
+            android:name="com.juxun.business.street.activity.WebviewActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"> <!-- 供应商 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.LogisticsDetailsActivity"
+            android:screenOrientation="portrait"> <!-- 物流详情 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.EleOrderDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.SeletedKDCompanyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitle1" />
+        <activity
+            android:name="com.juxun.business.street.activity.PosOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.PosOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"> <!-- 扫码 -->
+        </activity>
+
+        <activity
+            android:name="com.juxun.business.street.activity.MyOrderDetailsActivity"
+            android:screenOrientation="portrait"> <!-- 订单详情 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RegisteredOneActivity"
+            android:screenOrientation="portrait"> <!-- 注册流程第一步 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RegisteredTwoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 注册第二步 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AgainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" /> <!-- 重新提交审核 -->
+
+        <activity
+            android:name="com.juxun.business.street.activity.RegisteredSuccessfullyActivity"
+            android:screenOrientation="portrait"> <!-- 注册成功 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.LocationMapActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- 地图 -->
+        <activity
+            android:name="com.juxun.business.street.activity.OrderLogisticsSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.juxun.business.street.activity.PaySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.juxun.business.street.activity.NotificationUpdateActivity"
+            android:theme="@style/notitle1" />
+
+        <service android:name="com.juxun.business.street.service.DownloadService" />
+        <service
+            android:name="com.juxun.business.street.service.MyMQTTService"
+            android:exported="false">
+
+            <!-- <intent-filter android:priority="1000" > -->
+            <!-- </intent-filter> -->
+        </service>
+        <!-- 通道保持服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="taobao" />
+            </intent-filter>
+        </service>
+        <!-- Push SDK 相关组件，required -->
+        <!-- 消息接收服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.MsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.juxun.business.street.service.VersionService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name="com.juxun.business.street.activity.CustomDialogActivity"
+            android:theme="@style/versionCheckLibvtransparentTheme" />
+
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.CheckService"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.CHECK_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.taobao.accs.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.taobao.accs.ChannelService$KernelService"
+            android:exported="false"
+            android:process=":channel" />
+        <service
+            android:name="com.taobao.accs.data.MsgDistributeService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.accs.EventReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.taobao.accs.ServiceReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="org.android.agoo.accs.AgooService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.alibaba.sdk.android.push.AliyunPushIntentService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.agoo.AgooCommondReceiver"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+        <!-- V3.0.7及以上版本需配置 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.KeepChannelService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":channel" />
+
+        <receiver
+            android:name="com.alibaba.sdk.android.push.SystemEventReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- V3.0.9及以上版本需配置 -->
+        <activity
+            android:name="com.alibaba.sdk.android.push.keeplive.PushExtActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:process=":channel"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- 消息接收监听器 （用户可自主扩展） -->
+        <receiver
+            android:name="com.juxun.business.street.service.MyMsgReceiver"
+            android:exported="false"> <!-- 为保证receiver安全，建议设置不可导出，如需对其他应用开放可通过android：permission进行限制 -->
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.juxun.business.street.activity.AfterSaleListActivity"
+            android:label="@string/title_activity_after_sale_list"
+            android:screenOrientation="portrait"> <!-- 退换／售后 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.RequestAfterSaleActivity"
+            android:label="@string/title_activity_reqeust_aftersale"
+            android:screenOrientation="portrait"> <!-- 申请售后 -->
+        </activity>
+        <activity
+            android:name="com.juxun.business.street.activity.AfterSaleProgressActivity"
+            android:screenOrientation="portrait" /> <!-- 售后进度 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AfterReasonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 申请售后理由 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CancelOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 取消订单原因【订单】 -->
+        <activity
+            android:name="com.juxun.business.street.activity.CancelReasonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 取消订单原因【采购订单】 -->
+        <activity
+            android:name="com.juxun.business.street.activity.AfterApplyForActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 单个订单的售后记录 -->
+        <activity
+            android:name="com.juxun.business.street.activity.StoreValueCenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 储值中心 -->
+        <activity
+            android:name="com.juxun.business.street.activity.UserStatisticsctivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 用户统计中心 -->
+        <activity
+            android:name="com.juxun.business.street.activity.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 用户统计详情 -->
+        <activity
+            android:name="com.juxun.business.street.activity.UserStatisticsSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- 用户统计中心 搜索 -->
+        <activity
+            android:name="com.juxun.business.street.activity.StoreHistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 历史活动记录 -->
+        <activity
+            android:name="com.juxun.business.street.activity.StoreActsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 店铺周年庆优惠活动 -->
+        <activity
+            android:name="com.juxun.business.street.activity.StoreValueStaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- 储值统计 -->
+        <activity android:name="com.juxun.business.street.activity.SupplierShopListActivity" />
+        <activity android:name="com.juxun.business.street.activity.SupplierGoodsInfoActivity" />
+        <activity android:name="com.juxun.business.street.activity.CouponActivity" />
+        <activity android:name="com.juxun.business.street.activity.AddCouponActivity" />
+        <activity android:name="com.juxun.business.street.activity.AddCouponHelpActivity" />
+        <activity android:name="com.juxun.business.street.activity.CouponUseExpalinationActivity" />
+        <activity
+            android:name="com.juxun.business.street.activity.CouponAtcsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.juxun.business.street.activity.CounponActsDetailActivity" />
+        <activity android:name="com.juxun.business.street.activity.CouponHistoryActivity" />
+        <activity android:name="com.juxun.business.street.activity.CouponHisSearchActivity"></activity>
+    </application>
+
+</manifest>

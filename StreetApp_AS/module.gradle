@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+android {
+    signingConfigs {
+        config {
+            keyAlias 'luoming'
+            keyPassword '3544511'
+            storeFile file('/Users/luoming/Desktop/CHjijidao')
+            storePassword '3544511'
+        }
+    }
+    compileSdkVersion 20
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 20
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+

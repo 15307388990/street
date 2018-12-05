@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue" >
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="75.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="其它状态的商品"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/button_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:minWidth="70dip"
+            android:src="@drawable/commodity_icon_search"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="20dp" >
+
+        <RadioGroup
+            android:id="@+id/cagetoryGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/round"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <RadioButton
+                android:id="@+id/toaudit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/left_round"
+                android:button="@drawable/left_round"
+                android:checked="true"
+                android:gravity="center"
+                android:text="待审核"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/notthrough"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/no_round"
+                android:button="@drawable/no_round"
+                android:gravity="center"
+                android:text="未通过"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/withdrawn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/right_round"
+                android:button="@drawable/right_round"
+                android:gravity="center"
+                android:text="已撤销"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <com.ming.ui.PullToRefreshListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_wu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/commodity_pic_nodata" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="暂无数据"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <EditText
+        android:id="@+id/et_feedback_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/feedback_info"
+        android:gravity="top"
+        android:hint="请提出您的反馈，我们将会不断改进（必填）"
+        android:minLines="10"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/et_feedback_detail"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/feedback_tel"
+        android:hint="QQ、邮箱或手机等，以方便联系您（选填）"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+</LinearLayout>

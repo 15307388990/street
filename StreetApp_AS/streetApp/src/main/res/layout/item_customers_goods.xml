@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <ImageView
+            android:id="@+id/order_icon"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/_default"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/order_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/order_icon"
+            android:text="宫保鸡丁"
+            android:singleLine="true"
+            android:textColor="@color/order_textsize_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/order_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/order_icon"
+            android:text="￥100"
+            android:textColor="#FF6633"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/order_icon"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/order_paid_failure"
+            android:text="@string/closed"
+            android:padding="5dp"
+            android:textColor="#898989"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

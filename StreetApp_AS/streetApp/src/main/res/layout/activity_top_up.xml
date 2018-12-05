@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:id="@+id/ll_lyout"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="50dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="请选择充值的金额"
+            android:textColor="@color/actionbar_title_color"
+            android:textSize="15sp" />
+
+        <com.juxun.business.street.widget.GridViewWithHeaderAndFooter
+            android:id="@+id/rv_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:horizontalSpacing="30dp"
+            android:numColumns="2"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:verticalSpacing="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg_selector"
+        android:text="立即充值"
+        android:textColor="@drawable/textsize_selector"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="说明：\n1、充值的现金记录请在“余额”中查看；\n2、余额充值所赠送的红包，采购商品时可抵扣货款；\n3、充值所赠送的红包，请在“我的红包”中进行查看；\n4、自定义充值金额必须为 100 的整数倍数；\n5、充值活动解释权归e蜂社所有。"
+        android:textColor="@color/jiujiujiu" />
+
+</LinearLayout>

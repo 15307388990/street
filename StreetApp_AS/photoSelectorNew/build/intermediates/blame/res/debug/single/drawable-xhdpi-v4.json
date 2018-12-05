@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_menu_back.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xhdpi/ic_menu_back.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xhdpi-v4/btn_back.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xhdpi/btn_back.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xhdpi-v4/default_check_s.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xhdpi/default_check_s.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xhdpi-v4/selector_indicator.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xhdpi/selector_indicator.png"
+    }
+]

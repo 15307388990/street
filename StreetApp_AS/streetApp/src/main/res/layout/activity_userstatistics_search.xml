@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue" >
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <com.juxun.business.street.widget.ClearEditText
+            android:id="@+id/ed_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_input"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center"
+            android:minWidth="50dp"
+            android:text="取消"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:paddingLeft="15dp"
+            android:text="手机号"
+            android:textColor="@color/actionbar_title_color"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_chongzhi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_chongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值"
+                android:textColor="@color/actionbar_title_color" />
+
+            <ImageView
+                android:id="@+id/iv_chongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/sort_sign_none"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_xiaofei"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_xiaofei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费"
+                android:textColor="@color/actionbar_title_color" />
+
+            <ImageView
+                android:id="@+id/iv_xiaofei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/sort_sign_none"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_jine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_jine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额"
+                android:textColor="@color/actionbar_title_color" />
+
+            <ImageView
+                android:id="@+id/iv_jine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/sort_sign_none"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <com.ming.ui.PullToRefreshListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_wu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_pic_nodata" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="请输入手机号搜索"
+            android:textColor="@color/jiujiujiu"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

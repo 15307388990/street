@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue" >
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="储值统计"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_date_left"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/storedvalue_bg_date"
+                    android:gravity="center"
+                    android:text="2017-10-26"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/jiujiujiu" />
+
+                <TextView
+                    android:id="@+id/tv_date_right"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/storedvalue_bg_date"
+                    android:gravity="center"
+                    android:text="2017-10-27"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_date_confirm"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/storedvalue_btn_determine"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:background="@drawable/storedvalue_btn_determine"
+                android:gravity="center"
+                android:text="近三天"
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/storedvalue_btn_time_n"
+                android:gravity="center"
+                android:text="近一周"
+                android:textColor="@color/jiujiujiu"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/storedvalue_btn_time_n"
+                android:gravity="center"
+                android:text="近一月"
+                android:textColor="@color/jiujiujiu"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/back_d8" />
+
+    <View
+        android:id="@+id/view_upper_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/back_d8"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lv_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_lowwer_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/back_d8"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/storedvalue_pic_nouser" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="暂无相关数据"
+            android:textColor="@color/jiujiujiu"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

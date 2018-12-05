@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="20dp" >
+
+        <RadioGroup
+            android:id="@+id/cagetoryGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="1dp" >
+
+            <RadioButton
+                android:id="@+id/allItem"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:background="@drawable/left_round"
+                android:button="@drawable/left_round"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/waitUpLineItem"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/no_round"
+                android:button="@drawable/no_round"
+                android:gravity="center"
+                android:text="@string/waitupline"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+             <RadioButton
+                android:id="@+id/upLinedItem"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/no_round"
+                android:button="@drawable/no_round"
+                android:gravity="center"
+                android:text="@string/uplined"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+    
+             <RadioButton
+                android:id="@+id/downLineItem"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:background="@drawable/right_round"
+                android:button="@drawable/right_round"
+                android:gravity="center"
+                android:text="@string/downline"
+                android:textColor="@drawable/color_white_blue_selector"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+      <com.ming.ui.PullToRefreshListView
+        android:id="@+id/customersListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#E1E1E1"
+        android:dividerHeight="1dp"
+        android:listSelector="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

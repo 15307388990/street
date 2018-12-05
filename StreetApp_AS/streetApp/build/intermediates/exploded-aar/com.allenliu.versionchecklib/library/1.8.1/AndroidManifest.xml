@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.allenliu.versionchecklib"
+    android:versionCode="1"
+    android:versionName="1.8.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true" >
+        <activity
+            android:name="com.allenliu.versionchecklib.core.VersionDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/versionCheckLibvtransparentTheme" />
+
+        <provider
+            android:name="com.allenliu.versionchecklib.core.VersionFileProvider"
+            android:authorities="${applicationId}.versionProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/versionchecklib_file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.allenliu.versionchecklib.core.PermissionDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/versionCheckLibvtransparentTheme" />
+
+        <service
+            android:name="com.allenliu.versionchecklib.core.MyService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

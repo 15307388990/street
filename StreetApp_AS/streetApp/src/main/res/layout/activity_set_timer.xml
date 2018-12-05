@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_view" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="24小时营业"
+            android:textColor="@color/actionbar_title_color"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/cb_swith"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/swith_btn"
+            android:checked="true"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="开始时间" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.juxun.business.street.widget.WheelTimeView
+                android:id="@+id/wv_star_hh"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <com.juxun.business.street.widget.WheelTimeView
+                android:id="@+id/wv_star_mm"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="结束时间" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.juxun.business.street.widget.WheelTimeView
+                android:id="@+id/wv_end_hh"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <com.juxun.business.street.widget.WheelTimeView
+                android:id="@+id/wv_end_mm"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

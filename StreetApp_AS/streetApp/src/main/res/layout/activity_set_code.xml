@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp" >
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@color/white"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_store"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="客户通过微信/支付宝扫描二维码\n即可在线下店铺体验自助收银服务" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_bg1"
+        android:text="保存到手机"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

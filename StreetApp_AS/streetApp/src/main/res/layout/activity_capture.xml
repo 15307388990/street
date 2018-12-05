@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ll_san"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <com.juxun.business.street.zxing.view.ViewfinderView
+            android:id="@+id/viewfinder_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include1"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/dialog"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/codeinput_pic_400" />
+
+            <com.juxun.business.street.widget.ClearEditText
+                android:id="@+id/ed_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/search_input"
+                android:gravity="center_vertical"
+                android:hint="请手动输入商品条码"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_bg_selector"
+            android:clickable="false"
+            android:text="查询"
+            android:textColor="@drawable/textsize_selector"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rl_san"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_black"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tv_code"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/scan_icon_code"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="扫描添加商品"
+            android:textColor="@color/text_mipca" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/tv_crcodes"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:button="@null"
+            android:drawableTop="@drawable/scan_icon_crcodes"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="核验订单"
+            android:textColor="@color/text_mipca" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_san2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_black"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_one"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/codescan_icon_input" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_one"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="手动输入条码"
+            android:textColor="@color/gray" />
+
+        <ImageButton
+            android:id="@+id/btn_two"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/codescan_icon_nocode" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:text="添加无条码商品"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/green_vip"
+    android:id="@+id/content" >
+
+    <TextView
+        android:id="@+id/vipType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:singleLine="true"
+        android:text="@string/green_vip"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:id="@+id/shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="不夜天"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp" />
+    
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="折扣: 8.5"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>

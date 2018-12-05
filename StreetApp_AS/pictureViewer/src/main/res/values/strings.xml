@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PictureViewer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="save_photo">保存图片到手机</string>
+    <string name="save_photo_success">保存图片成功!</string>
+    <string name="cancel">取消</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+</resources>

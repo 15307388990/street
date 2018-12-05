@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <EditText
+        android:id="@+id/et_feedback_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请输入不超过140个字的店铺公告"
+        android:minLines="10"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:textColorHint="@color/ccc"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_bg"
+        android:text="立即发布"
+        android:textColor="@color/jiujiujiu"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注：公告字数不超过140，发布后立即生效"
+        android:layout_marginTop="15dp"
+        android:textSize="13sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/jiujiujiu"/>
+
+</LinearLayout>

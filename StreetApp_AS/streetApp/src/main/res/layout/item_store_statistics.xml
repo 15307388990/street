@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="	55dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/tv_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="130****8000"
+            android:textColor="@color/two_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_acts_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="充20.00送3.00元"
+            android:textColor="@color/two_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cardid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_phone_num"
+            android:layout_marginTop="5dp"
+            android:text="单号：6496210357891447"
+            android:textColor="@color/two_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_card_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_acts_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:text="2017.10.26 10:23:44"
+            android:textColor="@color/jiujiujiu"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/back_d8"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

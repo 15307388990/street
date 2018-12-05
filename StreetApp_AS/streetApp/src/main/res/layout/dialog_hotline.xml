@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/contentView" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="88dp"
+            android:text="@string/work_time"
+            android:textColor="@color/gray"
+            android:background="@color/white"
+            android:textSize="14sp"
+            android:id="@+id/tips" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/hotLine"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="400-629-9903"
+            android:textColor="@color/red"
+            android:background="@color/white"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+	
+    <TextView
+        android:id="@+id/dismissView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/contentView" />
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="选择提现方式"
+        android:textColor="@color/actionbar_title_color"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_mu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_d0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cb_decca"
+            android:button="@null" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_d1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cb_decca2"
+            android:button="@null" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="D0(实时到账)" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:text="D1(T1+自动到账)" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg_selector"
+        android:text="下一步"
+        android:textColor="@drawable/textsize_selector"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="说明：\n1.D0(实时到账)，用户付款后将实时到账您的账户，平台会收取您5%的手续费和单笔0.5元的管理费；\n2.D1（T+1自动到账），用户付款后会延迟到账您的账户，平台仅收取5%的手续费；\n3.您可以根据实际需要随时更改提现方式。"
+        android:textColor="@color/jiujiujiu"
+        android:textSize="13sp" />
+
+</LinearLayout>

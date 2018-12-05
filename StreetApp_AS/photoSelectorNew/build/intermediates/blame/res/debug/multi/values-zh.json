@@ -1,0 +1,197 @@
+[
+    {
+        "outputFile": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 46,
+                    "endOffset": 97
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 22,
+                        "endColumn": 46,
+                        "endOffset": 64
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 102,
+                    "endColumn": 37,
+                    "endOffset": 135
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 395,
+                        "endColumn": 37,
+                        "endOffset": 428
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 140,
+                    "endColumn": 36,
+                    "endOffset": 172
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 358,
+                        "endColumn": 36,
+                        "endOffset": 390
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 177,
+                    "endColumn": 49,
+                    "endOffset": 222
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 308,
+                        "endColumn": 49,
+                        "endOffset": 353
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 227,
+                    "endColumn": 42,
+                    "endOffset": 265
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 433,
+                        "endColumn": 42,
+                        "endOffset": 471
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 270,
+                    "endColumn": 54,
+                    "endOffset": 320
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 253,
+                        "endColumn": 54,
+                        "endOffset": 303
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 325,
+                    "endColumn": 52,
+                    "endOffset": 373
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 200,
+                        "endColumn": 52,
+                        "endOffset": 248
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 378,
+                    "endColumn": 41,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 158,
+                        "endColumn": 41,
+                        "endOffset": 195
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 42,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endColumn": 42,
+                        "endOffset": 153
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 44,
+                    "endOffset": 503
+                },
+                "from": {
+                    "file": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/values-zh/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 70,
+                        "endColumn": 44,
+                        "endOffset": 110
+                    }
+                }
+            }
+        ]
+    }
+]

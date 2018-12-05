@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="welcome_status_color">#37affe</color>
+    <color name="blue">#2b84e2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#C8C7CC</color>
+    <color name="green">#92c428</color>
+    <color name="yellow">#fda915</color>
+    <color name="black">#000000</color>
+    <color name="gray_black">#5a5a5a</color>
+    <color name="register_bg_color">#F3F3F3</color>
+    <color name="financial_tbg_color">#2175CE</color>
+    <color name="bind_bluetooth_bg_color">#63BBFF</color>
+    <color name="red">#F53333</color>
+    <color name="translucent_white">#BBFFFFFF</color>
+    <color name="translucent_gray">#BBCCCCCC</color>
+    <color name="order_textsize_color">#121212</color>
+    <color name="brick_red">#ff6633</color>
+    <color name="order_state_success">#2D83E2</color>
+    <color name="order_state_failure">#898989</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="actionbar_background_color">#F8C301</color>
+    <color name="actionbar_title_color">#333333</color>
+    <color name="financial">#FF9900</color>
+    <!-- 半透明黑色 -->
+    <color name="transparentbg">#7f434343</color>
+    <color name="dialog_title_color">#ff33b5e5</color>
+    <!-- 1级慧 -->
+    <color name="one_gray">#999</color>
+    <!-- 1级慧 -->
+    <color name="jiujiujiu">#999</color>
+    <!-- 3级慧 -->
+    <color name="ccc">#ccc</color>
+    <!-- 2级慧 -->
+    <color name="two_gray">#333</color>
+    <color name="twogray">#cecece</color>
+    <color name="tv_red">#f94135</color>
+    <color name="point_cash_yellow">#f7b262</color>
+    <color name="point_cash_green">#84c96d</color>
+    <color name="point_cash_blue">#2ea7ee</color>
+    <color name="back_d8">#d8d8d8</color>
+    <color name="back_blue">#71b0f6</color>
+    <color name="back_f3">#f3f3f3</color>
+    <color name="guide_words">#9ac772</color>
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#59B29C</color>
+    <color name="text2">#333333</color>
+    <color name="text_gray_bg">#dfdfdf</color>
+
+</resources>

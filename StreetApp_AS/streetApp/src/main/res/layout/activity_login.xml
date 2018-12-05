@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/register_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/top_view"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/layout_login_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/login_bg_input1" >
+
+                <EditText
+                    android:id="@+id/et_login_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_user_input_hint"
+                    android:inputType="text"
+                    android:paddingLeft="40dp"
+                    android:singleLine="true"
+                    android:textColorHint="#d2d2d7"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_user" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ccc" />
+
+            <FrameLayout
+                android:id="@+id/layout_login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/login_bg_input2" >
+
+                <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_pwd_input_hint"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="40dp"
+                    android:singleLine="true"
+                    android:textColorHint="#d2d2d7"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_password" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/login"
+            android:textColor="@color/jiujiujiu"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_registered"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="立即注册"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_forgot"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="忘记密码"
+                android:visibility="invisible"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/hotLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/icon_phone"
+                android:drawablePadding="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hot_line"
+                android:textColor="@color/blue"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/hotLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:text="@string/apply"
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

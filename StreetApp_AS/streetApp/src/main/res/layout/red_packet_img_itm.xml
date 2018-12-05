@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_red_record"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="查看历史红包记录"
+        android:textColor="@color/blue" />
+
+</LinearLayout>

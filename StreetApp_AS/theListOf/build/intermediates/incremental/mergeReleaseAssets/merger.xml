@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/luoming/Desktop/workspace_as/StreetApp_AS/theListOf/src/main/assets"/><source path="/Users/luoming/Desktop/workspace_as/StreetApp_AS/theListOf/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/luoming/Desktop/workspace_as/StreetApp_AS/theListOf/src/release/assets"/></dataSet></merger>

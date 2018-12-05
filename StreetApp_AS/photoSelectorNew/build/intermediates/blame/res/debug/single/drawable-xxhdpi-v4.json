@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/default_check.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/default_check.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/btn_unselected.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/btn_unselected.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/asv.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/asv.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/btn_selected.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/btn_selected.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/text_indicator.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/text_indicator.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/default_error.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/default_error.png"
+    },
+    {
+        "merged": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/asy.png",
+        "source": "/Users/luoming/Desktop/workspace_as/StreetApp_AS/photoSelectorNew/src/main/res/drawable-xxhdpi/asy.png"
+    }
+]

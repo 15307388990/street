@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red" />
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="40dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_skip"
+        android:gravity="center"
+        android:text="跳过"
+        android:textColor="@color/jiujiujiu"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="140dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_upper1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:gravity="center"
+                android:text="商品管理改版"
+                android:textColor="@color/guide_words"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_upper2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="更改提现入口"
+                android:textColor="@color/guide_words"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_upper3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="新增营业分析"
+                android:textColor="@color/guide_words"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_lower1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="1"
+                android:gravity="center"
+                android:text="管理商品更方便快捷"
+                android:textColor="@color/jiujiujiu"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_lower2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="以后想提现更方便"
+                android:textColor="@color/jiujiujiu"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_lower3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="随时查看营业动态"
+                android:textColor="@color/jiujiujiu"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/guidepage_btn_enter"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="立即体验"
+        android:textColor="@color/translucent_white"
+        android:textSize="17sp"
+        android:alpha="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <View
+                android:id="@+id/v_dot0"
+                style="@style/dot_style"
+                android:background="@drawable/guidepage_point_s" />
+
+            <View
+                android:id="@+id/v_dot1"
+                style="@style/dot_style"
+                android:layout_marginLeft="12dp" />
+
+            <View
+                android:id="@+id/v_dot2"
+                style="@style/dot_style"
+                android:layout_marginLeft="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
